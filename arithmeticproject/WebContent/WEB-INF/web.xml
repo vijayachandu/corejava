@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>arithmeticproject</display-name>
+	<servlet>
+		<servlet-name>LoginValidateServ</servlet-name>
+		<servlet-class>com.controller.LoginValidateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginValidateServ</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ArthmeticServ</servlet-name>
+		<servlet-class>com.controller.ArthmeticServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArthmeticServ</servlet-name>
+		<url-pattern>/arthmic</url-pattern>
+	</servlet-mapping>
+<context-param>
+	<param-name>log4j-config-location</param-name>
+	<param-value>WEB-INF/log4j.properties</param-value>
+</context-param>
+
+	<welcome-file-list>
+		<welcome-file>Welcome.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
